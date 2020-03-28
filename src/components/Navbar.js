@@ -14,11 +14,11 @@ import {
   ListItemText
 } from "@material-ui/core";
 import {
-  ArrowBack,
   AssignmentInd,
   Home,
   Apps,
-  ContactMail
+  ContactMail,
+  MenuOpenRounded
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/styles";
 import avatar from "../images/me.png";
@@ -58,7 +58,6 @@ const menuItems = [
   }
 ];
 
-const sideList = slider => {};
 const Navbar = () => {
   const [state, setState] = useState({
     right: false
@@ -70,7 +69,11 @@ const Navbar = () => {
   const classes = useStyles();
 
   const sideList = slider => (
-    <Box className={classes.menuContainer} component="div">
+    <Box
+      className={classes.menuContainer}
+      component="div"
+      onClick={toggleSlider(slider, false)}
+    >
       <Avatar className={classes.avatar} src={avatar} alt="Swarnjit Chahal" />
       <Divider />
       <List>
@@ -94,7 +97,7 @@ const Navbar = () => {
         <AppBar position="static" style={{ background: "#222" }}>
           <Toolbar>
             <IconButton onClick={toggleSlider("right", true)}>
-              <ArrowBack style={{ color: "orange" }} />
+              <MenuOpenRounded style={{ color: "orange" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "lightblue" }}>
               Swarnjit's Portfolio

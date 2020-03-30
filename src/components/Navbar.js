@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   menuContainer: {
     width: 250,
     background: "#511",
-    height: "100%"
+    height: "50%"
   },
   avatar: {
     display: "block",

@@ -3,12 +3,11 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Particles from "react-particles-js";
 import { makeStyles } from "@material-ui/styles";
-import { Divider } from "@material-ui/core";
 
 const useStyles = makeStyles({
   particles: {
-    position: "absolute"
-  }
+    position: "absolute",
+  },
 });
 
 const Home = () => {
@@ -16,23 +15,33 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Divider />
       <Header />
       <Particles
         canvasClassName={classes.particles}
         params={{
           particles: {
             number: {
-              value: 45
+              value: 100,
+              density: {
+                enable: true,
+                value_area: 1000,
+              },
+            },
+            size: {
+              value: 15,
             },
             line_linked: {
               shadow: {
                 enable: true,
-                color: "orange",
-                blur: 1
-              }
-            }
-          }
+                color: "lightblue",
+                blur: 1,
+              },
+            },
+            shape: {
+              type: "circle",
+              color: "lightblue",
+            },
+          },
         }}
       />
     </>

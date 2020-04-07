@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import RightMenu from "@material-ui/core/Drawer";
 import {
   AppBar,
@@ -11,74 +12,78 @@ import {
   Divider,
   Typography,
   Box,
-  ListItemText
+  ListItemText,
 } from "@material-ui/core";
 import {
   AssignmentInd,
   Home,
   Apps,
   ContactMail,
-  MenuOpenRounded
+  MenuOpenRounded,
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/styles";
 import avatar from "../images/me.png";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   menuContainer: {
     width: 250,
-    background: "#511",
-    height: "50%"
+    background: "#311",
+    height: "30rem",
   },
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: 130,
-    height: 130
+    width: 104,
+    height: 104,
   },
   listItem: {
-    color: "lightblue"
-  }
-}));
+    color: "lightblue",
+  },
+});
 const menuItems = [
   {
     listIcon: <Home />,
-    listText: "Home"
+    listText: "Home",
+    listPath: "/",
   },
   {
     listIcon: <AssignmentInd />,
-    listText: "Resume"
+    listText: "Resume",
+    listPath: "/resume",
   },
   {
     listIcon: <Apps />,
-    listText: "Portfolio"
+    listText: "Portfolio",
+    listPath: "/",
   },
   {
     listIcon: <ContactMail />,
-    listText: "Contacts"
-  }
+    listText: "Contacts",
+    listPath: "/",
+  },
 ];
 
 const Navbar = () => {
   const [state, setState] = useState({
-    right: false
+    right: false,
   });
 
-  const toggleSlider = (slider, open) => () => {
+  const toggleSideMenu = (slider, open) => () => {
     setState({ ...state, [slider]: open });
   };
   const classes = useStyles();
 
-  const sideList = slider => (
+  const sideList = (slider) => (
     <Box
       className={classes.menuContainer}
       component="div"
-      onClick={toggleSlider(slider, false)}
+      onClick={toggleSideMenu(slider, false)}
     >
       <Avatar className={classes.avatar} src={avatar} alt="Swarnjit Chahal" />
       <Divider />
       <List>
         {menuItems.map((IsItem, key) => (
-          <ListItem button key={key}>
+          <ListItem button key={key} component={Link} to={IsItem.listPath}>
             <ListItemIcon className={classes.listItem}>
               {IsItem.listIcon}
             </ListItemIcon>
@@ -94,9 +99,9 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="fixed" style={{ background: "#222" }}>
+        <AppBar position="static" style={{ background: "#311" }}>
           <Toolbar>
-            <IconButton onClick={toggleSlider("right", true)}>
+            <IconButton onClick={toggleSideMenu("right", true)}>
               <MenuOpenRounded style={{ color: "orange" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "lightblue" }}>
@@ -104,7 +109,7 @@ const Navbar = () => {
             </Typography>
             <RightMenu
               open={state.right}
-              onClose={toggleSlider("right", false)}
+              onClose={toggleSideMenu("right", false)}
             >
               {sideList("right")}
             </RightMenu>

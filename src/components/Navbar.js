@@ -21,10 +21,10 @@ import {
   ContactMail,
   MenuOpenRounded,
 } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../images/me.png";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   menuContainer: {
     width: 250,
     background: "#311",
@@ -33,13 +33,14 @@ const useStyles = makeStyles({
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: 104,
-    height: 104,
+    width: theme.spacing(14),
+    height: theme.spacing(14),
   },
   listItem: {
     color: "lightblue",
   },
-});
+}));
+
 const menuItems = [
   {
     listIcon: <Home />,

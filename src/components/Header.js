@@ -2,12 +2,12 @@ import React from "react";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import avatar from "../images/me.png";
 import Typed from "react-typed";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   avatar: {
-    width: 120,
-    height: 120,
+    width: theme.spacing(15),
+    height: theme.spacing(15),
     margin: 8,
   },
   title: {
@@ -31,23 +31,32 @@ const useStyles = makeStyles(() => ({
 const Header = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.typedOutput}>
-      <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Swarnjit Chahal" />
-      </Grid>
+    <>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["Swarnjit Chahal"]} typeSpeed={40} />
+        <Typed strings={["Under Construction...."]} typeSpeed={40} />
       </Typography>
-      <br />
-      <Typography className={classes.subtitle} variant="h5">
-        <Typed
-          strings={["Java Developer", "React Developer"]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-        />
-      </Typography>
-    </Box>
+      <Box className={classes.typedOutput}>
+        <Grid container justify="center">
+          <Avatar
+            className={classes.avatar}
+            src={avatar}
+            alt="Swarnjit Chahal"
+          />
+        </Grid>
+        <Typography className={classes.title} variant="h4">
+          <Typed strings={["Swarnjit Chahal"]} typeSpeed={40} />
+        </Typography>
+        <br />
+        <Typography className={classes.subtitle} variant="h5">
+          <Typed
+            strings={["Java Developer", "React Developer"]}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+          />
+        </Typography>
+      </Box>
+    </>
   );
 };
 

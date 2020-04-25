@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
       width: "44%",
       margin: "1rem",
       "&:nth-of-type(2n)": {
-        float: "right",
+        float: "left",
         margin: "1rem",
         borderColor: "tan",
       },
@@ -136,16 +136,79 @@ const Resume = () => {
             <Typography
               variant="body1"
               align="center"
-              className={classes.company}
+              style={{ color: "#311" }}
             >
               SkipTheDishes Restaurant Operations Inc.
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
-              className={classes.details}
+              style={{ color: "#311" }}
             >
-              Lorem ipsum dolor sit amet
+              Creating Full stack solutions (Java, React, Terraform) Support
+              application throughout the software lifecycle Writing unit tests
+              for every possible case scenario related to the code Worked on
+              REST APIs and Microservices Deployment (CI/CD) using Jenkins
+              Incubator Team Captain for new software developers in the training
+              program
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2020
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.subHeading}
+            >
+              Full Stack Software Developer
+            </Typography>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "#311" }}
+            >
+              SkipTheDishes Restaurant Operations Inc.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "#311" }}
+            >
+              Creating Full stack solutions (Java, React, Terraform) Support
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2019
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.subHeading}
+            >
+              Full Stack Software Developer
+            </Typography>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "#311" }}
+            >
+              SkipTheDishes Restaurant Operations Inc.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "#311" }}
+            >
+              Creating Full stack solutions (Java, React, Terraform) Support
             </Typography>
           </Box>
         </Box>

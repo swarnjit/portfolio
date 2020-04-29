@@ -9,11 +9,11 @@ import { lightBlue } from "@material-ui/core/colors";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    padding: "10px",
   },
   avatar: {
-    width: theme.spacing(20),
-    height: theme.spacing(20),
-    margin: "60px 20px 0 0",
+    width: theme.spacing(30),
+    height: theme.spacing(30),
   },
   profile: {
     margin: "20px 0 0 0 ",
@@ -30,37 +30,30 @@ const useStyles = makeStyles((theme) => ({
   typedOutput: {
     transform: "translate(-50%, -50%)",
     textAlign: "center",
+    marginBottom: 30,
   },
   strong: {
     color: "#4bffa5",
-  },
-  card: {
-    margin: "10px",
   },
   paper: {
     height: 140,
     width: 100,
   },
-  control: {
-    padding: theme.spacing(2),
-  },
-
   header: {
     backgroundColor: lightBlue[500],
   },
   intro: {
-    fontSize: 60,
+    fontSize: 50,
     [theme.breakpoints.down("xs")]: {
-      fontSize: 40,
+      fontSize: 30,
     },
     color: "white",
     textAlign: "center",
-    marginLeft: 10,
-    marginRight: 10,
   },
   introPaper: {
     backgroundColor: "black",
     opacity: 0.8,
+    marginBottom: 50,
   },
 }));
 
@@ -70,25 +63,17 @@ const Header = () => {
     <div style={{ backgroundImage: `url(${bg}`, backgroundSize: "cover" }}>
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12}>
-          <Grid container justify="center" spacing={2}>
-            <Card align="center" style={{ backgroundColor: "transparent" }}>
-              <Avatar
-                variant="rounded"
-                className={classes.avatar}
-                src={avatar}
-                alt="Swarnjit Chahal"
-                align="center"
-              />
-            </Card>
+          <Grid container justify="center">
+            <Avatar
+              variant="circle"
+              className={classes.avatar}
+              src={avatar}
+              alt="Swarnjit Chahal"
+            />
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Grid
-            xs={12}
-            container
-            className={classes.introPaper}
-            justify="center"
-          >
+          <Grid xs={12} container justify="center">
             <Paper elevation={3} className={classes.introPaper}>
               <Typography variant="h2" className={classes.intro}>
                 Full Stack Software Developer
@@ -103,6 +88,9 @@ const Header = () => {
                   Swarnjit Singh Chahal
                 </strong>
                 , Full Stack Software Developer based in GTA, Canada
+              </Typography>
+              <Typography className={classes.title} variant="h5" align="center">
+                React | Java | JavaScript | MySQL | TypeScript
               </Typography>
               <Typography
                 className={classes.subtitle}

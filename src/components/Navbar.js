@@ -14,7 +14,7 @@ import {
   Box,
   ListItemText,
 } from "@material-ui/core";
-import { AssignmentInd, Home, ContactMail } from "@material-ui/icons";
+import { AssignmentInd, Home } from "@material-ui/icons";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../images/me.png";
@@ -44,11 +44,6 @@ const menuItems = [
     listIcon: <AssignmentInd />,
     listText: "Resume",
     listPath: "/resume",
-  },
-  {
-    listIcon: <ContactMail />,
-    listText: "Contacts",
-    listPath: "/",
   },
 ];
 

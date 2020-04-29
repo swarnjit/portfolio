@@ -38,9 +38,7 @@ const Resume = () => {
   return (
     <>
       <Navbar />
-      <Typography variant="h4" align="center" style={{ color: "lightblue" }}>
-        Work Experience & Education
-      </Typography>
+
       <Grid container>
         <Grid item md={3} component={Card} className={classes.headerIntro}>
           <Avatar
@@ -55,7 +53,7 @@ const Resume = () => {
             Looking for open opportunities in and around GTA
           </Typography>
           <Box align="center">
-            <Typography variant="h6" style={{ color: "Blue" }}>
+            <Typography variant="h6" style={{ color: "lightblue" }}>
               email: swarnjitchahal@gmail.com
             </Typography>
             <IconButton
@@ -80,6 +78,13 @@ const Resume = () => {
         </Grid>
         <Grid item md={8} component={Card} className={classes.resume}>
           <Box className={classes.typoMargin}>
+            <Typography
+              variant="h4"
+              align="center"
+              style={{ color: "lightblue" }}
+            >
+              Work Experience & Education
+            </Typography>
             <Typography
               variant="h5"
               style={{ fontWeight: "bold" }}
@@ -114,13 +119,13 @@ const Resume = () => {
             >
               Work Experience
             </Typography>
-            <Typography>
+            <Typography align="justify">
               <b>
                 Software Developer, SkipTheDishes Restaurant Services Inc (Feb
                 2019 – Oct 2019)
               </b>
             </Typography>
-            <Typography>
+            <Typography align="justify">
               <ul>
                 <li>Creating Full stack solutions (Java, React, Terraform)</li>
                 <li> Support application throughout the software lifecycle</li>
@@ -135,6 +140,85 @@ const Resume = () => {
                   {" "}
                   Incubator Team Captain for software developers in the training
                   program
+                </li>
+              </ul>
+            </Typography>
+            <Typography
+              variant="h5"
+              style={{ fontWeight: "bold", margin: "10px 0 0 0" }}
+              align="center"
+            >
+              Education
+            </Typography>
+            <Typography align="justify">
+              <b>
+                ComIT Organization, Winnipeg Java Programming (September 2018)
+              </b>
+            </Typography>
+            <Typography align="justify">
+              <ul>
+                <li>
+                  <b>Course Highlights</b>: Enterprise Application Development,
+                  Security, Java Programming, IT Project Management, Database
+                  Programming, Web Design, and Algorithm Design
+                </li>
+                <li>
+                  <b>Project</b>: Past2Future, an online timeline web
+                  application to add events from past and coming in future.
+                  Developed using HTML, CSS3, JSP, MySQL database, JSTL and
+                  other available tools like Java libraries.
+                </li>
+              </ul>
+            </Typography>
+            <Typography align="justify">
+              <b>
+                Red River College, Winnipeg, Manitoba Technology Management
+                Post-Graduate Diploma (April 2016)
+              </b>
+            </Typography>
+            <Typography align="justify">
+              <ul>
+                <li>
+                  <b>Specific Courses:</b>: Managerial Communications, Project
+                  Management Fundamentals, Managing Roles and Values
+                </li>
+                <li>
+                  <b>Graduation Project:</b>Finding the reasons behind poor
+                  battery life in smartphones
+                </li>
+              </ul>
+            </Typography>
+            <Typography align="justify">
+              <b>
+                SLIET University Longowal, Punjab, India Computer Science and
+                Engineering (B.E) (June 2014)
+              </b>
+            </Typography>
+            <Typography align="justify">
+              <ul>
+                <li>
+                  <b>Specific Courses:</b>Object Oriented Programming,
+                  Graduation Project, Networking and Communication Systems
+                </li>
+                <li>
+                  <b>Graduation Project:</b>Iamreporter.in (News broadcasting
+                  system where registered users are allowed to submit news from
+                  their local area with a picture and story)
+                </li>
+              </ul>
+            </Typography>
+            <Typography align="justify">
+              <b>
+                Thapar Polytechnic, Patiala, Punjab, India Computer Science and
+                Engineering (Diploma) (June 2010)
+              </b>
+            </Typography>
+            <Typography align="justify">
+              <ul>
+                <li>
+                  <b>Specific Courses:</b>Peripheral Devices, Microprocessor
+                  8085, Basic Electrical &amp; Electronics Engineering, Software
+                  Engineering
                 </li>
               </ul>
             </Typography>

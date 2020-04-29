@@ -120,6 +120,24 @@ const Resume = () => {
               Work Experience
             </Typography>
             <Typography align="justify">
+              <b>Full Stack Web Developer, Freelance (Nov 2019 – Present)</b>
+            </Typography>
+            <Typography align="justify">
+              <ul>
+                <li> Build a Covid-19 Tracker in React.js using Material-UI</li>
+                <li>
+                  Incorporated APIs to fetch updated data for Covid-19 Tracker
+                </li>
+                <li> Designed and Developed websites for small businesses</li>
+                <li>
+                  Excelled in creating responsive UI using different libraries
+                </li>
+
+                <li> Deployment (CI/CD) using Git and GitHub Pages</li>
+                <li>Used modern UI technologies to design neat webapps</li>
+              </ul>
+            </Typography>
+            <Typography align="justify">
               <b>
                 Software Developer, SkipTheDishes Restaurant Services Inc (Feb
                 2019 – Oct 2019)

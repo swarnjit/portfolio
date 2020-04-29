@@ -88,9 +88,17 @@ const Navbar = () => {
             <IconButton onClick={toggleSideMenu("right", true)}>
               <MenuIcon style={{ color: "orange" }} />
             </IconButton>
-            <Typography variant="h5" style={{ color: "lightblue" }}>
+
+            <Typography
+              variant="h5"
+              button
+              style={{ color: "lightblue", textDecoration: "none" }}
+              component={Link}
+              to={"/"}
+            >
               &#x3c;&#8725;&#x3e;Swarnjit's Portfolio
             </Typography>
+
             <RightMenu
               open={state.right}
               onClose={toggleSideMenu("right", false)}

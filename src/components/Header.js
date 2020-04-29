@@ -115,8 +115,8 @@ const Header = () => {
                     "I work on <strong>Java and React</strong>",
                     "I love to <strong>code</strong>",
                   ]}
-                  typeSpeed={40}
-                  backSpeed={50}
+                  typeSpeed={60}
+                  backSpeed={60}
                   loop
                   className={classes.typedOutput}
                 />

@@ -1,23 +1,23 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Header from "./Header";
-import Particles from "react-particles-js";
-import { makeStyles } from "@material-ui/styles";
+// import Particles from "react-particles-js";
+// import { makeStyles } from "@material-ui/styles";
 import ProjectViewer from "./ProjectViewer";
 import Footer from "./Footer";
 
-const useStyles = makeStyles({
-  particles: {
-    position: "absolute",
-  },
-});
+// const useStyles = makeStyles({
+//   particles: {
+//     position: "absolute",
+//   },
+// });
 
 const Home = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <>
       <Navbar />
-      <Particles
+      {/* <Particles
         canvasClassName={classes.particles}
         params={{
           particles: {
@@ -44,7 +44,7 @@ const Home = () => {
             },
           },
         }}
-      />
+      /> */}
       <Header />
       <ProjectViewer />
       <Footer />

@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^7.1.2",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-iframe": "^1.8.0",
     "react-particles-js": "^2.7.1",

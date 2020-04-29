@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Particles from "react-particles-js";
 import { makeStyles } from "@material-ui/styles";
+import ProjectViewer from "./ProjectViewer";
+import Footer from "./Footer";
 
 const useStyles = makeStyles({
   particles: {
@@ -15,7 +17,6 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Header />
       <Particles
         canvasClassName={classes.particles}
         params={{
@@ -28,7 +29,7 @@ const Home = () => {
               },
             },
             size: {
-              value: 15,
+              value: 8,
             },
             line_linked: {
               shadow: {
@@ -44,6 +45,9 @@ const Home = () => {
           },
         }}
       />
+      <Header />
+      <ProjectViewer />
+      <Footer />
     </>
   );
 };

@@ -7,11 +7,11 @@ import Resume from "./components/Resume";
 
 function App() {
   return (
-    <>
+    <div>
       <CssBaseline />
       <Route exact path="/" component={Home} />
       <Route path="/resume" component={Resume} />
-    </>
+    </div>
   );
 }
 

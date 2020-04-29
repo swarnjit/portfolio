@@ -1,111 +1,35 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Avatar,
+  Box,
+  IconButton,
+  Card,
+} from "@material-ui/core";
 import Navbar from "./Navbar";
+import { makeStyles } from "@material-ui/core/styles";
+import avatar from "../images/me.png";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
-  mainContainer: {
-    background: "#f5f0f0",
+  headerIntro: {
+    background: "#fcf8f7",
+    margin: "10px 10px 10px 10px",
   },
-  timeLine: {
-    position: "relative",
-    padding: "1rem",
-    margin: "0 auto",
-    "&:before": {
-      content: "''",
-      position: "absolute",
-      height: "100%",
-      border: "1px solid tan",
-      right: "40px",
-      top: theme.spacing(1),
-    },
-    "&:after": {
-      content: "''",
-      display: "table",
-      clear: "both",
-    },
-    [theme.breakpoints.up("md")]: {
-      padding: "2rem",
-      "&:before": {
-        left: "calc(50% - 1px)",
-        right: "auto",
-      },
-    },
+  avatar: {
+    display: "block",
+    margin: "0.5rem auto",
+    width: theme.spacing(14),
+    height: theme.spacing(14),
   },
-  timeLineItem: {
-    padding: "1rem",
-    borderBottom: "2px solid tan",
-    position: "relative",
-    margin: "1rem 3rem 1rem 1rem",
-    clear: "both",
-    "&:after": {
-      content: "''",
-      position: "absolute",
-    },
-    "&:before": {
-      content: "''",
-      position: "absolute",
-      right: "-0.625rem",
-      top: "calc(50%-5px)",
-      borderStyle: "solid",
-      borderColor: "tomato tomato transparent transparent",
-      borderWidth: "0.625rem",
-      transform: "rotate(45deg)",
-    },
-    [theme.breakpoints.up("md")]: {
-      width: "44%",
-      margin: "1rem",
-      "&:nth-of-type(2n)": {
-        float: "left",
-        margin: "1rem",
-        borderColor: "tan",
-      },
-      "&:nth-of-type(2n):before": {
-        right: "auto",
-        left: "-0.625rem",
-        borderColor: "transparent transparent tomato tomato",
-      },
-    },
+  resume: {
+    background: "#fcf8f7",
+    margin: "10px 10px 10px 10px",
   },
-  timeLineYear: {
-    textAlign: "center",
-    maxWidth: "9.375rem",
-    margin: "0 3rem 0 auto",
-    fontSize: "1.8rem",
-    background: "lightblue",
-    color: "white",
-    lineHeight: 1,
-    padding: "0.5rem 0 1rem",
-    "&:before": {
-      display: "none",
-    },
-    [theme.breakpoints.up("md")]: {
-      textAlign: "center",
-      margin: "0 auto",
-      "&:nth-of-type(2n)": {
-        float: "none",
-        margin: "0 auto",
-      },
-      "&:nth-of-type(2n):before": {
-        display: "none",
-      },
-    },
-  },
-  heading: {
-    color: "lightblue",
-    padding: "3rem 0",
-    textTransform: "uppercase",
-  },
-  subHeading: {
-    color: "lightblue",
-    padding: "0",
-    textTransform: "uppercase",
-  },
-  details: {
-    color: "#311",
-  },
-  company: {
-    color: "#311",
+  typoMargin: {
+    margin: "0 10px",
   },
 }));
 
@@ -114,105 +38,107 @@ const Resume = () => {
   return (
     <>
       <Navbar />
-      <Box component="header" className={classes.mainContainer}>
-        <Typography variant="h4" align="center" className={classes.heading}>
-          Work Experience
-        </Typography>
-        <Box component="div" className={classes.timeLine}>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2019
+      <Typography variant="h4" align="center" style={{ color: "lightblue" }}>
+        Work Experience & Education
+      </Typography>
+      <Grid container>
+        <Grid item md={3} component={Card} className={classes.headerIntro}>
+          <Avatar
+            className={classes.avatar}
+            src={avatar}
+            alt="Swarnjit Chahal"
+          />
+          <Typography variant="h5" align="center">
+            Full Stack Software Developer(Java & React) looking for open
+            opportunities in and around GTA
           </Typography>
-          <Box component="div" className={classes.timeLineItem}>
+          <Box align="center">
+            <Typography variant="h6" style={{ color: "Blue" }}>
+              Connect with me
+            </Typography>
+            <IconButton
+              aria-label="Linkedin.com"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/swarnjit-chahal-2239492a/"
+                )
+              }
+            >
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton
+              aria-label="GitHub.com"
+              onClick={() =>
+                window.open("https://github.com/swarnjit/covid-19")
+              }
+            >
+              <GitHubIcon />
+            </IconButton>
+          </Box>
+        </Grid>
+        <Grid item md={8} component={Card} className={classes.resume}>
+          <Box className={classes.typoMargin}>
             <Typography
               variant="h5"
+              style={{ fontWeight: "bold" }}
               align="center"
-              className={classes.subHeading}
             >
-              Full Stack Software Developer
+              Technologies
             </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "#311" }}
-            >
-              SkipTheDishes Restaurant Operations Inc.
+            <Typography variant="subtitle1" align="justify">
+              <b>Languages and Web technologies:</b> Java, J2EE, JSP, Servlet,
+              React (With Redux) and Python (Jinja2), Material UI, HTML 5, CSS,
+              JavaScript, Bootstrap4, Typescript
             </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "#311" }}
-            >
-              Creating Full stack solutions (Java, React, Terraform) Support
-              application throughout the software lifecycle Writing unit tests
-              for every possible case scenario related to the code Worked on
-              REST APIs and Microservices Deployment (CI/CD) using Jenkins
-              Incubator Team Captain for new software developers in the training
-              program
+            <Typography variant="subtitle1" align="justify">
+              <b>Platforms:</b> Windows Operating Systems, Tomcat, Apache Web
+              Server
             </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2020
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
+            <Typography variant="subtitle1" align="justify">
+              <b>Databases:</b> MySQL, ElasticSearch and Memcache
+            </Typography>
+            <Typography variant="subtitle1" align="justify">
+              <b>Tools:</b> Eclipse, IntelliJ, PyCharm, Postman, XAMPP,
+              NetBeans, Visual Studio Code
+            </Typography>
+            <Typography variant="subtitle1" align="justify">
+              <b>Agile and Version Control:</b> Git, Jira and other Atlassian
+              tools
+            </Typography>
             <Typography
               variant="h5"
+              style={{ fontWeight: "bold", margin: "10px 0 0 0" }}
               align="center"
-              className={classes.subHeading}
             >
-              Full Stack Software Developer
+              Work Experience
             </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "#311" }}
-            >
-              SkipTheDishes Restaurant Operations Inc.
+            <Typography>
+              <b>
+                Software Developer, SkipTheDishes Restaurant Services Inc (Feb
+                2019 – Oct 2019)
+              </b>
             </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "#311" }}
-            >
-              Creating Full stack solutions (Java, React, Terraform) Support
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2019
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
-            >
-              Full Stack Software Developer
-            </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "#311" }}
-            >
-              SkipTheDishes Restaurant Operations Inc.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "#311" }}
-            >
-              Creating Full stack solutions (Java, React, Terraform) Support
+            <Typography>
+              <ul>
+                <li>Creating Full stack solutions (Java, React, Terraform)</li>
+                <li> Support application throughout the software lifecycle</li>
+                <li>
+                  {" "}
+                  Writing unit tests for every possible case scenario related to
+                  the code
+                </li>
+                <li> REST APIs and Microservices</li>
+                <li> Deployment (CI/CD) using Jenkins</li>
+                <li>
+                  {" "}
+                  Incubator Team Captain for software developers in the training
+                  program
+                </li>
+              </ul>
             </Typography>
           </Box>
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
     </>
   );
 };

@@ -14,21 +14,14 @@ import {
   Box,
   ListItemText,
 } from "@material-ui/core";
-import {
-  AssignmentInd,
-  Home,
-  Apps,
-  ContactMail,
-  MenuOpenRounded,
-} from "@material-ui/icons";
+import { AssignmentInd, Home, ContactMail } from "@material-ui/icons";
+import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../images/me.png";
 
 const useStyles = makeStyles((theme) => ({
   menuContainer: {
     width: 250,
-    background: "#311",
-    height: "30rem",
   },
   avatar: {
     display: "block",
@@ -37,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(14),
   },
   listItem: {
-    color: "lightblue",
+    color: "black",
   },
 }));
 
@@ -51,11 +44,6 @@ const menuItems = [
     listIcon: <AssignmentInd />,
     listText: "Resume",
     listPath: "/resume",
-  },
-  {
-    listIcon: <Apps />,
-    listText: "Portfolio",
-    listPath: "/",
   },
   {
     listIcon: <ContactMail />,
@@ -100,10 +88,10 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: "#311" }}>
+        <AppBar position="static" style={{ background: "#333" }}>
           <Toolbar>
             <IconButton onClick={toggleSideMenu("right", true)}>
-              <MenuOpenRounded style={{ color: "orange" }} />
+              <MenuIcon style={{ color: "orange" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "lightblue" }}>
               Swarnjit's Portfolio

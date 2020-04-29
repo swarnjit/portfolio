@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Typography,
-  Avatar,
-  Grid,
-  Card,
-  CardHeader,
-  CardMedia,
-  Paper,
-} from "@material-ui/core";
+import { Typography, Avatar, Grid, Card, Paper } from "@material-ui/core";
 import avatar from "../images/me.png";
 import bg from "../images/bg.png";
 import Typed from "react-typed";

@@ -94,7 +94,7 @@ const Navbar = () => {
               <MenuIcon style={{ color: "orange" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "lightblue" }}>
-              Swarnjit's Portfolio
+              &#x3c;&#8725;&#x3e;Swarnjit's Portfolio
             </Typography>
             <RightMenu
               open={state.right}

@@ -49,12 +49,14 @@ const Resume = () => {
             alt="Swarnjit Chahal"
           />
           <Typography variant="h5" align="center">
-            Full Stack Software Developer(Java & React) looking for open
-            opportunities in and around GTA
+            Full Stack Software Developer(Java & React)
+          </Typography>
+          <Typography variant="subtitle1">
+            Looking for open opportunities in and around GTA
           </Typography>
           <Box align="center">
             <Typography variant="h6" style={{ color: "Blue" }}>
-              Connect with me
+              email: swarnjitchahal@gmail.com
             </Typography>
             <IconButton
               aria-label="Linkedin.com"

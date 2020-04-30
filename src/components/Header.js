@@ -28,9 +28,8 @@ const useStyles = makeStyles((theme) => ({
     color: "#4bffa5",
   },
   typedOutput: {
-    transform: "translate(-50%, -50%)",
     textAlign: "center",
-    marginBottom: 30,
+    marginBottom: 10,
   },
   strong: {
     color: "#4bffa5",
@@ -78,6 +77,9 @@ const Header = () => {
               <Typography variant="h2" className={classes.intro}>
                 Full Stack Software Developer
               </Typography>
+              <hr
+                style={{ width: "40%", borderBottom: "solid white 6px" }}
+              ></hr>
               <Typography
                 className={classes.title}
                 variant="subtitle1"

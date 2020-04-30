@@ -49,7 +49,7 @@ const Resume = () => {
           <Typography variant="h5" align="center">
             Full Stack Software Developer(Java & React)
           </Typography>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" align="center">
             Looking for open opportunities in and around GTA
           </Typography>
           <Box align="center">

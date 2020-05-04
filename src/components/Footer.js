@@ -6,11 +6,9 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    height: 100,
     backgroundColor: "lightblue",
   },
   copyright: {
-    height: 40,
     backgroundColor: "#333",
     color: "white",
   },

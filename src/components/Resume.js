@@ -12,6 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../images/me.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
   headerIntro: {
@@ -243,6 +244,7 @@ const Resume = () => {
           </Box>
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };

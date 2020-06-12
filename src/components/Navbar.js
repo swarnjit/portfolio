@@ -83,7 +83,7 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: "#333" }}>
+        <AppBar position="fixed" style={{ background: "#333" }}>
           <Toolbar>
             <IconButton onClick={toggleSideMenu("right", true)}>
               <MenuIcon style={{ color: "orange" }} />
@@ -107,6 +107,7 @@ const Navbar = () => {
             </RightMenu>
           </Toolbar>
         </AppBar>
+        <Toolbar />
       </Box>
     </>
   );

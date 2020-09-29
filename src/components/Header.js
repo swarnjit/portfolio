@@ -59,7 +59,13 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   return (
-    <div style={{ backgroundImage: `url(${bg}`, backgroundSize: "cover" }}>
+    <div
+      style={{
+        backgroundImage: `url(${bg}`,
+        backgroundSize: "cover",
+        maxHeight: "70vh",
+      }}
+    >
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12}>
           <Grid container justify="center">

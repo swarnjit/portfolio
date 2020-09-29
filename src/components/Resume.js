@@ -96,7 +96,7 @@ const Resume = () => {
             <Typography variant="subtitle1" align="justify">
               <b>Languages and Web technologies:</b> Java, J2EE, JSP, Servlet,
               React (With Redux) and Python (Jinja2), Material UI, HTML 5, CSS,
-              JavaScript, Bootstrap4, Typescript
+              JavaScript, Bootstrap4, ReactStrap and Typescript
             </Typography>
             <Typography variant="subtitle1" align="justify">
               <b>Platforms:</b> Windows Operating Systems, Tomcat, Apache Web
@@ -125,10 +125,8 @@ const Resume = () => {
             </Typography>
             <Typography align="justify">
               <ul>
-                <li> Build a Covid-19 Tracker in React.js using Material-UI</li>
-                <li>
-                  Incorporated APIs to fetch updated data for Covid-19 Tracker
-                </li>
+                <li> Built a Covid-19 Tracker in React.js using Material-UI</li>
+                <li>Designed Full Stack applications using Java and React</li>
                 <li> Designed and Developed websites for small businesses</li>
                 <li>
                   Excelled in creating responsive UI using different libraries

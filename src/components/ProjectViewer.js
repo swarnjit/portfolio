@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
 import { Grid, ButtonBase, CardContent, Button } from "@material-ui/core";
 import project1 from "../images/covidTracker.png";
+import project2 from "../images/project2.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -111,24 +112,37 @@ export default function ProjectViewer() {
               className={classes.projectPreview}
             >
               <ButtonBase
-                onClick={() => window.open("https://www.swarnjitchahal.com")}
+                onClick={() => window.open("https://www.bispari.com")}
               >
                 <CardHeader
                   avatar={
-                    <Avatar
-                      aria-label="Past-To-Future"
-                      className={classes.avatar}
-                    >
-                      P
+                    <Avatar aria-label="Bispari" className={classes.avatar}>
+                      B
                     </Avatar>
                   }
-                  title="Your life events timeline"
+                  title="Connect with local businesses"
                   subheader="Full Stack Project"
                 />
               </ButtonBase>
-
+              <CardMedia className={classes.projectSnapshot} image={project2} />
               <CardContent>
-                <Typography>Under Construction</Typography>
+                <Typography color="textPrimary" gutterBottom variant="h5">
+                  Bispari
+                </Typography>
+                <Typography variant="subtitle2">
+                  This project is designed using React and Material-UI
+                  components. Backend is built using Spring Framework for java.
+                  Data is stored using MySql and served to Front End through
+                  APIs.
+                </Typography>
+                <CardActions>
+                  <Button
+                    size="small"
+                    onClick={() => window.open("https://www.bispari.com")}
+                  >
+                    Go to Project Website
+                  </Button>
+                </CardActions>
               </CardContent>
             </Grid>
           </Grid>

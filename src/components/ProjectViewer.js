@@ -10,6 +10,7 @@ import { red } from "@material-ui/core/colors";
 import { Grid, ButtonBase, CardContent, Button } from "@material-ui/core";
 import project1 from "../images/covidTracker.png";
 import project2 from "../images/project2.jpg";
+import project3 from "../images/project3.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,7 +79,7 @@ export default function ProjectViewer() {
                     </Avatar>
                   }
                   title="Covid-19 Tracker"
-                  subheader="React Project using APIs"
+                  subheader="React.js, Material-UI"
                 />
               </ButtonBase>
               <CardMedia className={classes.projectSnapshot} image={project1} />
@@ -86,22 +87,22 @@ export default function ProjectViewer() {
                 <Typography color="textPrimary" gutterBottom variant="h5">
                   Covid-19 Tracker
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle2" align="justify">
                   This project is designed using React and Material-UI
                   components. Data is fetched from third party sources using
-                  APIs
+                  APIs. Data is updated about every 15 minutes or so.
                 </Typography>
-                <CardActions>
-                  <Button
-                    size="small"
-                    onClick={() =>
-                      window.open("https://www.trackcovid-19.online")
-                    }
-                  >
-                    Go to Project Website
-                  </Button>
-                </CardActions>
               </CardContent>
+              <CardActions>
+                <Button
+                  size="small"
+                  onClick={() =>
+                    window.open("https://www.trackcovid-19.online")
+                  }
+                >
+                  Go to Project Website
+                </Button>
+              </CardActions>
             </Grid>
 
             <Grid
@@ -121,7 +122,7 @@ export default function ProjectViewer() {
                     </Avatar>
                   }
                   title="Connect with local businesses"
-                  subheader="Full Stack Project"
+                  subheader="React.js, Spring Boot"
                 />
               </ButtonBase>
               <CardMedia className={classes.projectSnapshot} image={project2} />
@@ -129,21 +130,64 @@ export default function ProjectViewer() {
                 <Typography color="textPrimary" gutterBottom variant="h5">
                   Bispari
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle2" align="justify">
                   This project is designed using React and Material-UI
                   components. Backend is built using Spring Framework for java.
                   Data is stored using MySql and served to Front End through
                   APIs.
                 </Typography>
-                <CardActions>
-                  <Button
-                    size="small"
-                    onClick={() => window.open("https://www.bispari.com")}
-                  >
-                    Go to Project Website
-                  </Button>
-                </CardActions>
               </CardContent>
+              <CardActions>
+                <Button
+                  size="small"
+                  onClick={() => window.open("https://www.bispari.com")}
+                >
+                  Go to Project Website
+                </Button>
+              </CardActions>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={3}
+              component={Card}
+              className={classes.projectPreview}
+            >
+              <ButtonBase
+                onClick={() => window.open("https://www.bispari.com")}
+              >
+                <CardHeader
+                  avatar={
+                    <Avatar aria-label="Bispari" className={classes.avatar}>
+                      B
+                    </Avatar>
+                  }
+                  title="Photography Portfolio"
+                  subheader="React.js Reactstrap, Material-UI"
+                />
+              </ButtonBase>
+              <CardMedia className={classes.projectSnapshot} image={project3} />
+              <CardContent>
+                <Typography color="textPrimary" gutterBottom variant="h5">
+                  Lenzz-Art
+                </Typography>
+                <Typography variant="subtitle2" align="justify">
+                  This project is designed using React and Material-UI
+                  components along with Reactstrap. Carousel was built to
+                  showcase the photographer's work. Photographer can be
+                  contacted using contact me form
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  size="small"
+                  onClick={() =>
+                    window.open("https://swarnjit.github.io/lenzz-art")
+                  }
+                >
+                  Go to Project Website
+                </Button>
+              </CardActions>
             </Grid>
           </Grid>
         </Grid>

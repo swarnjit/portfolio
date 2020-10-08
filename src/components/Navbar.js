@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import RightMenu from "@material-ui/core/Drawer";
+import PersonIcon from "@material-ui/icons/Person";
 import {
   AppBar,
   Toolbar,
@@ -13,8 +14,16 @@ import {
   Typography,
   Box,
   ListItemText,
+  Button,
+  Hidden,
 } from "@material-ui/core";
-import { AssignmentInd, Home } from "@material-ui/icons";
+import {
+  AssignmentInd,
+  GitHub,
+  Home,
+  LinkedIn,
+  PersonPinCircleOutlined,
+} from "@material-ui/icons";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../images/me.png";
@@ -31,6 +40,73 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     color: "black",
+  },
+  list: {
+    fontSize: "14px",
+    margin: 0,
+    paddingLeft: "0",
+    listStyle: "none",
+    paddingTop: "0",
+    paddingBottom: "0",
+    color: "inherit",
+    float: "right",
+  },
+  navItem: {
+    float: "left",
+    color: "inherit",
+    fontSize: "20px",
+    position: "relative",
+    display: "block",
+    width: "auto",
+    marginRight: "10px",
+    justifyContent: "space-between",
+    padding: "0",
+    "&:hover,&:focus": {
+      color: "lightblue",
+      background: "transparent",
+    },
+  },
+  navLink: {
+    color: "lightblue",
+    position: "relative",
+    padding: "0.9375rem",
+    fontWeight: "600",
+    fontSize: "16px",
+    textTransform: "capitalize",
+    borderRadius: "3px",
+    lineHeight: "20px",
+    textDecoration: "none",
+    margin: "0px",
+    display: "inline-flex",
+    "&:hover,&:focus": {
+      color: "#1dbf73",
+      background: "rgba(200, 200, 200, 0.2)",
+    },
+  },
+  toolbar: {
+    minHeight: "50px",
+    flex: "1",
+    alignItems: "center",
+    justifyContent: "space-between",
+    display: "flex",
+    flexWrap: "nowrap",
+    paddingRight: "15px",
+    paddingLeft: "15px",
+    marginRight: "auto",
+    marginLeft: "auto",
+    width: "100%",
+    "@media (min-width: 576px)": {
+      maxWidth: "540px",
+    },
+    "@media (min-width: 768px)": {
+      maxWidth: "720px",
+    },
+    "@media (min-width: 992px)": {
+      maxWidth: "960px",
+    },
+    "@media (min-width: 1200px)": {
+      maxWidth: "1140px",
+    },
   },
 }));
 
@@ -84,10 +160,18 @@ const Navbar = () => {
     <>
       <Box component="nav">
         <AppBar position="fixed" style={{ background: "#333" }}>
-          <Toolbar>
-            <IconButton onClick={toggleSideMenu("right", true)}>
-              <MenuIcon style={{ color: "orange" }} />
-            </IconButton>
+          <Toolbar className={classes.toolbar}>
+            <Hidden mdUp>
+              <IconButton onClick={toggleSideMenu("right", true)}>
+                <MenuIcon style={{ color: "orange", alignItems: "left" }} />
+              </IconButton>
+              <RightMenu
+                open={state.right}
+                onClose={toggleSideMenu("right", false)}
+              >
+                {sideList("right")}
+              </RightMenu>
+            </Hidden>
 
             <Typography
               variant="h5"
@@ -99,12 +183,32 @@ const Navbar = () => {
               &#x3c;&#8725;&#x3e;Swarnjit's Portfolio
             </Typography>
 
-            <RightMenu
-              open={state.right}
-              onClose={toggleSideMenu("right", false)}
-            >
-              {sideList("right")}
-            </RightMenu>
+            <Hidden smDown>
+              <div className={classes.list}>
+                <List>
+                  <ListItem className={classes.navItem}>
+                    <Button component={Link} to="/" className={classes.navLink}>
+                      <GitHub />
+                    </Button>
+                  </ListItem>
+                  <ListItem className={classes.navItem}>
+                    <Button component={Link} to="/" className={classes.navLink}>
+                      <LinkedIn />
+                    </Button>
+                  </ListItem>
+                  <ListItem className={classes.navItem}>
+                    <Button
+                      component={Link}
+                      to="/resume"
+                      className={classes.navLink}
+                    >
+                      <PersonIcon />
+                      Resume
+                    </Button>
+                  </ListItem>
+                </List>
+              </div>
+            </Hidden>
           </Toolbar>
         </AppBar>
         <Toolbar />

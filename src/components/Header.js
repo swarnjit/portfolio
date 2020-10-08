@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Avatar, Grid, Paper } from "@material-ui/core";
 import avatar from "../images/me.png";
-import bg from "../images/bg.png";
+import bg from "../images/bg.jpg";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import { lightBlue } from "@material-ui/core/colors";
@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${bg}`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(${bg}`,
         backgroundSize: "cover",
         maxHeight: "70vh",
       }}

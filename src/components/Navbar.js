@@ -189,9 +189,7 @@ const Navbar = () => {
                   <ListItem className={classes.navItem}>
                     <Button
                       aria-label="GitHub.com"
-                      onClick={() =>
-                        window.open("https://github.com/swarnjit/covid-19")
-                      }
+                      onClick={() => window.open("https://github.com/swarnjit")}
                       className={classes.navLink}
                     >
                       <GitHub />

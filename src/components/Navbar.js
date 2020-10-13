@@ -187,12 +187,26 @@ const Navbar = () => {
               <div className={classes.list}>
                 <List>
                   <ListItem className={classes.navItem}>
-                    <Button component={Link} to="/" className={classes.navLink}>
+                    <Button
+                      aria-label="GitHub.com"
+                      onClick={() =>
+                        window.open("https://github.com/swarnjit/covid-19")
+                      }
+                      className={classes.navLink}
+                    >
                       <GitHub />
                     </Button>
                   </ListItem>
                   <ListItem className={classes.navItem}>
-                    <Button component={Link} to="/" className={classes.navLink}>
+                    <Button
+                      aria-label="Linkedin.com"
+                      onClick={() =>
+                        window.open(
+                          "https://www.linkedin.com/in/swarnjit-chahal-2239492a/"
+                        )
+                      }
+                      className={classes.navLink}
+                    >
                       <LinkedIn />
                     </Button>
                   </ListItem>
